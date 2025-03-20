@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --color-1: #ebeac5;
+    --color-2: #83e1ad;
+    --color-3: #3ddc84;
+    --color-4: #2fa866;
+    --color-5: #1a5c37;
+    --color-6: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: Bebas Neue, sans-serif;
+    --font-android: Android, cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-1);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--color-4), var(--color-6));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.35);
+}
+
+nav {
+    background-color: var(--color-6);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.192);
+}
+
+nav > a {
+    color: var(--color-2);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    margin: 0 5px;
+    font-family: var(--fonte-padrao);
+}
+
+nav > a:hover {
+    background-color: var(--color-2);
+    color:var(--color-6);
+}
+
+main {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.423);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;    
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--color-4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-6);
+    background-color: var(--color-2);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    background-color: var(--color-3);
+}
+
+main h1 {
+    color: var(--color-6);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--color-5);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right , var(--color-2), transparent);
+    padding: 6px;
+    text-indent: 8px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+
+div.video{
+    background-color: var(--color-6);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 56.5%;
+}
+
+div.video iframe {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--color-2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.315);
+}
+
+aside > h3 {
+    background-color: var(--color-5);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+aside > ul{
+    list-style-position: inside;
+    list-style-type: square;
+    columns: 2;
+}
+
+
+footer {
+    background-color: var(--color-6);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;    
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-2);
+}
