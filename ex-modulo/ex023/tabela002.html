@@ -12,6 +12,22 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption{
+            font-size: 1.2em;
+            background-color: lightgray;
+            border: 1px solid #000;
+        }
+
+        caption p{
+            font-size: 1em;
+            margin: 0;
+        }
+
+        caption h2{
+            margin: 10px 0;
         }
 
         td, th{
@@ -20,8 +36,19 @@
         }
 
         thead, tfoot{
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th{
+            position: sticky;   
+            top: 0;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(even){ /*even = impar 
+                                      odd  = par*/
+            background-color: lightgray;
         }
 
         td.num{
@@ -33,10 +60,15 @@
 <body>
     <h1>uso de tabelas grandes</h1>
     <table>
+        <caption>
+            <h2>população dos estados brasileiros</h2>
+            <p>dados de 2023</p>
+            <p>fonte: IBGE</p> 
+        </caption>
         <thead>
             <tr>
-                <th>estado</th>
-                <th>populaçao</th>
+                <th scope="col">estado</th>
+                <th scope="col" style="width: 50px;">populaçao</th>
             </tr>
         </thead>
         <tbody>
@@ -151,7 +183,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>total de habitantes</th>
+                <th scope="row">total de habitantes</th>
                 <td class="num"><strong>212.583.750</strong></td>
             </tr>
         </tfoot>
