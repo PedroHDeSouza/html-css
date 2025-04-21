@@ -1,3 +1,4 @@
 {
-    "php.validate.executablePath": ""
+    "php.validate.executablePath": "",
+    "livePreview.defaultPreviewPath": "/ex-modulo/ex025/form004.html"
 }
