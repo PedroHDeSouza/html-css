@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>teste de formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iNumb1">Numero 1:</label>
+            <input type="number" name="nNumb1" id="iNumb1" min="0" max="10" step="1" required oninput="iSoma.innerHTML = Number(iNumb1.value) + Number(iNumb2.value);">
+        </p>
+        <p>
+            <label for="iNumb2">Numero 2:</label>
+            <input type="number" name="nNumb2" id="iNumb2" min="0" max="10" step="1" required oninput="iSoma.innerHTML = Number(iNumb1.value) + Number(iNumb2.value);">
+        </p>
+        <p>
+            <label for="iSoma">Soma:</label>
+            <output name="nSoma" id="iSoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
