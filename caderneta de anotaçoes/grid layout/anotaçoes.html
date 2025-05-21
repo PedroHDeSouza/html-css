@@ -49,6 +49,18 @@
 
     grid-template = shorthands do grid-template-column e grid-template-row ex: grit-template: 100px 100px 100px / auto auto auto; (primeiro o row depois o column)
     
+    função repeat() = usado para repetir funçoes ex = (grid-template-column: auto auto auto;) pode ser usado como (grid-template-column: repeat(3, auto))
+
+    unidade fracional = divide os grid em fraçoes, ex (grid-template-column: 1fr 1fr 1fr, que seria a mesma coisa q, auto auto auto), porem cada fraçao pode ser modificada, ex(grid-auto-column: 1fr 2fr 1fr) onde 2fr é 2 vezes o tamanho de 1fr normal, porem a conta seria 3 colunas, porem 4 fraçoes, em uma tela de 1500px, ficaria 375px, para cada fraçao, ou seja a fraçao 2fr = 2x375px (750px)
+
+------------------------------------------------------------------------------------------------------
+
+    misturando:
+    grid = 1500px
+    grid-auto-column: 100px 20% 1fr 1fr; ou grid-auto-column: 100px 20% repeat(2, 1fr);
+    100px = primeira coluna
+    20% = 20% de 1500px (% nao é usado o restante de 1400, mas sim o valor do container inteiro) = 300px da segunda coluna
+    1fr 1fr ou repeat(2, 1fr) = 1100/2 (fr usa apenas o restante do container, nao o valor por inteiro) = 550px para cada fraçao 
 
 </body>
 </html>
